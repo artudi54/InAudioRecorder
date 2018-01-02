@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/InAudioRecorder">
+        <file>programIcon.ico</file>
+    </qresource>
+</RCC>
