@@ -5,7 +5,7 @@ InAudioRecorder is a simple program written in C++ with Qt framework. It records
 ![alt text](ReadmeImage.png "Preview")
 
 ## Features
-- record from any input device avaible in OS
+- record from any input device available in OS
 - set audio format and record configuration
 - play recorded audio
 - save record file in selected location
