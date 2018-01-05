@@ -67,6 +67,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_inaudiorecorder.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="inaudiorecorderapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -80,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_inaudiorecorder.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inaudiorecorderapplication.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

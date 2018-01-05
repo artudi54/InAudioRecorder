@@ -1,31 +1,25 @@
 #include "stdafx.h"
+#include "inaudiorecorderapplication.h"
 #include "inaudiorecorder.hpp"
 
-class OneInstanceApp : public QApplication {
-public:
-	OneInstanceApp(int &argc, char *argv[])
-		: QApplication(argc, argv)
-		, instanceMemory("InOutAudioRecorder_instanceMemory", this) {}
-	bool is_only_instance() {
-		return instanceMemory.create(1);
-	}
-private:
-	QSharedMemory instanceMemory;
-};
 
 int main(int argc, char *argv[]) {
-	OneInstanceApp application(argc, argv);
-	OneInstanceApp::setWindowIcon(QIcon(":/InAudioRecorder/programIcon.ico"));
-	if (!application.is_only_instance()) {
-		QMessageBox::information(nullptr, "Start Error", "Another instance of application is already running. Exitting.");
-		return EXIT_SUCCESS;
-	}
-	QString appPath = QApplication::applicationDirPath();
-	QString currentPath = QDir::currentPath();
-	if (appPath != currentPath)
-		QDir::setCurrent(appPath);
-
-	InAudioRecorder w;
-	w.show();
-	return application.exec();
+    InAudioRecorderApplication application(argc, argv);
+    InAudioRecorderApplication::setWindowIcon(QIcon(":/InAudioRecorder/programIcon.ico"));
+    if (!application.is_only_instance()) {
+        QMessageBox::information(nullptr, "Start Error", "Another instance of application is already running. Exitting.");
+        return EXIT_SUCCESS;
+    }
+    application.set_working_directory();
+    InAudioRecorder recorder;
+    recorder.setGeometry(
+        QStyle::alignedRect(
+            Qt::LeftToRight,
+            Qt::AlignCenter,
+            recorder.size(),
+            application.desktop()->availableGeometry()
+        )
+    );
+    recorder.show();
+    return application.exec();
 }

@@ -4,17 +4,38 @@
 
 TEMPLATE = app
 TARGET = InAudioRecorder
-DESTDIR = ../x64/Debug
+Debug {
+    DESTDIR = ../x64/Debug
+}
+Release {
+    DESTDIR = ../x64/Release
+}
 QT += core multimedia widgets gui
-CONFIG += debug console
-DEFINES += WIN64 QT_WIDGETS_LIB QT_MULTIMEDIA_LIB
+DEFINES += QT_WIDGETS_LIB QT_MULTIMEDIA_LIB
+CONFIG += precompile_header
+Debug {
+    CONFIG += console debug
+}
+Release {
+CONFIG += release
+}
 INCLUDEPATH += ./GeneratedFiles \
     . \
     ./GeneratedFiles/Debug
 PRECOMPILED_HEADER = stdafx.h
 DEPENDPATH += .
-MOC_DIR += ./GeneratedFiles/debug
-OBJECTS_DIR += debug
+Debug {
+    MOC_DIR += ./GeneratedFiles/Debug
+}
+Release {
+    MOC_DIR += ./GeneratedFiles/Release
+}
+Debug {
+    OBJECTS_DIR += Debug
+}
+Release {
+    OBJECTS_DIR += Release
+}
 UI_DIR += ./GeneratedFiles
 RCC_DIR += ./GeneratedFiles
 include(InAudioRecorder.pri)

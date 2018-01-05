@@ -97,6 +97,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="inaudiorecorder.cpp" />
+    <ClCompile Include="inaudiorecorderapplication.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="optionsdialog.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -127,6 +128,7 @@
     </CustomBuild>
     <ClInclude Include="GeneratedFiles\ui_inaudiorecorder.h" />
     <ClInclude Include="GeneratedFiles\ui_optionsdialog.h" />
+    <ClInclude Include="inaudiorecorderapplication.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
