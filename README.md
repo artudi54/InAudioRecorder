@@ -14,6 +14,7 @@ InAudioRecorder is a simple program written in C++ with Qt framework. It records
 [All releases](https://github.com/artud54/InAudioRecorder/releases/1.0 "All releases")
 ### Pre-build with bundled Qt dependencies packages:
 [Windows x64](https://github.com/artud54/InAudioRecorder/releases/download/1.0_windows/InAudioRecorder.zip "Windows x64")
+
 [Linux x64](https://github.com/artud54/InAudioRecorder/releases/download/1.0_linux/InAudioRecorder.zip "Linux x64")
 
 ## About Project
