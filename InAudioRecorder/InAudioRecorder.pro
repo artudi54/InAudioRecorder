@@ -4,20 +4,20 @@
 
 TEMPLATE = app
 TARGET = InAudioRecorder
-debug {
+Debug {
     DESTDIR = ../x64/Debug
 }
-release {
+Release {
     DESTDIR = ../x64/Release
 }
 QT += core multimedia widgets gui
 DEFINES += QT_WIDGETS_LIB QT_MULTIMEDIA_LIB
 CONFIG += precompile_header
-debug {
+Debug {
     CONFIG += console debug
 }
-release {
-    CONFIG += release
+Release {
+	CONFIG += release
 }
 INCLUDEPATH += ./GeneratedFiles \
     . \
