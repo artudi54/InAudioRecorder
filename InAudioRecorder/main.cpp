@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "inaudiorecorderapplication.h"
+#include "inaudiorecorderapplication.hpp"
 #include "inaudiorecorder.hpp"
 
 

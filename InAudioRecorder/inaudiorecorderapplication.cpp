@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "inaudiorecorderapplication.h"
+#include "inaudiorecorderapplication.hpp"
 
 InAudioRecorderApplication::InAudioRecorderApplication(int & argc, char * argv[])
 	: QApplication(argc, argv)
